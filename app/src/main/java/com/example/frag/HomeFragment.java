@@ -2,11 +2,24 @@ package com.example.frag;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.frag.adapter.PlaceAdapter;
+import com.example.frag.adapter.TourAdapter;
+import com.example.frag.adapter.TrendAdapter;
+import com.example.frag.model.ItemList;
+import com.example.frag.model.PlaceModel;
+import com.example.frag.model.TourModel;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,28 +28,30 @@ import android.view.ViewGroup;
  */
 public class HomeFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
+    private ArrayList<PlaceModel> arrayList;
+    private RecyclerView view1, view2;
+    private TrendAdapter adapter;
+
+    private ArrayList<TourModel> arrayList2;
+    private TourAdapter adapter2;
+
+
+
+
     public HomeFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
@@ -53,7 +68,9 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,4 +78,49 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initValue1();
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        view1 = view.findViewById(R.id.view1);
+        view1.setLayoutManager(linearLayoutManager);
+
+        /*view1 = view.findViewById(R.id.view1);
+        view1.setLayoutManager(new LinearLayoutManager(getContext()));
+        view1.hasFixedSize();*/
+        PlaceAdapter adapter = new PlaceAdapter(getContext(),arrayList);
+        view1.setAdapter(adapter);
+
+
+
+        initValue2();
+
+
+    }
+
+    private void initValue2() {
+
+        ArrayList<TourModel> arrayList2 = new ArrayList<>();
+
+
+
+
+
+
+    }
+
+    private void initValue1() {
+        arrayList = new ArrayList<>();
+
+        arrayList.add(new PlaceModel("Quảng Ninh", R.drawable.img));
+        arrayList.add(new PlaceModel("Ninh Bình", R.drawable.img_10));
+        arrayList.add(new PlaceModel("Quảng Bình", R.drawable.img_1));
+        arrayList.add(new PlaceModel("Đà Nẵng", R.drawable.img_2));
+        arrayList.add(new PlaceModel("Sa Pa", R.drawable.img_5));
+        arrayList.add(new PlaceModel("Nha Trang", R.drawable.img_6));
+
+    }
+
+
 }

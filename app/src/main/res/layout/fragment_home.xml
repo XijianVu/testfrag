@@ -3,14 +3,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DC9797"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#E1B9B9"
     tools:context=".HomeFragment">
-
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Trang chủ"
-        android:layout_gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/svSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:iconifiedByDefault="false"
+                android:layout_marginBottom="10dp"
+                app:queryHint="Search Tour" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="350dp"
+                android:layout_height="177dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img"
+                tools:src="@drawable/img_10" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:clipToPadding="false"
+
+                android:paddingHorizontal="22dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="22dp"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
 
 </FrameLayout>

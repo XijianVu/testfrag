@@ -9,6 +9,30 @@
         <entry key="..\:/AndroidStudioProject/test/frag/app/src/main/res/layout/fragment_ticket.xml" value="0.2421875" />
         <entry key="..\:/AndroidStudioProject/test/frag/app/src/main/res/layout/fragment_trend.xml" value="0.2421875" />
         <entry key="..\:/AndroidStudioProject/test/frag/app/src/main/res/menu/menu_navigation.xml" value="0.2421875" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/background_viewholder1.xml" value="0.1455" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/background_viewholder2.xml" value="0.1555" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/btn_bg.xml" value="0.1555" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/btn_white.xml" value="0.1455" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/card_background.xml" value="0.1455" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/ic_baseline_account_balance_wallet_24.xml" value="0.1455" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.1455" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24_2.xml" value="0.1455" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/ic_baseline_credit_card_24.xml" value="0.1455" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1455" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/drawable/ic_baseline_settings_24_2.xml" value="0.1455" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/activity_detail.xml" value="0.20878623188405798" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/fragment_account.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/fragment_account2.xml" value="0.17575757575757575" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/fragment_detail.xml" value="0.2421875" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/fragment_trend.xml" value="0.2421875" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/item_list_view.xml" value="0.11778115501519756" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/item_listv_view.xml" value="0.20878623188405798" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/viewholder1.xml" value="0.24114583333333334" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/layout/viewholder2.xml" value="0.4" />
+        <entry key="..\:/AndroidStudioProject/test/testfrag/app/src/main/res/menu/menu_navigation.xml" value="0.2421875" />
       </map>
     </option>
   </component>
