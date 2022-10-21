@@ -7,19 +7,25 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.frag.adapter.PhotoAdapter;
 import com.example.frag.adapter.PlaceAdapter;
 import com.example.frag.adapter.TourAdapter;
 import com.example.frag.adapter.TrendAdapter;
 import com.example.frag.model.ItemList;
+import com.example.frag.model.Photo;
 import com.example.frag.model.PlaceModel;
 import com.example.frag.model.TourModel;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import me.relex.circleindicator.CircleIndicator;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -44,6 +50,9 @@ public class HomeFragment extends Fragment {
     private ArrayList<TourModel> arrayList2;
     private TourAdapter adapter2;
 
+    private ViewPager viewPager;
+    private CircleIndicator circleIndicator;
+    private PhotoAdapter photoAdapter;
 
 
 
@@ -94,21 +103,30 @@ public class HomeFragment extends Fragment {
 
 
 
-        initValue2();
+        //Slider
+        viewPager = view.findViewById(R.id.viewPager);
+        circleIndicator = view.findViewById(R.id.circle_indicator);
 
+        photoAdapter = new PhotoAdapter(getContext(), getListPhoto());
+        viewPager.setAdapter(photoAdapter);
+
+        circleIndicator.setViewPager(viewPager);
+        photoAdapter.registerDataSetObserver(circleIndicator.getDataSetObserver());
+
+    }
+    private List<Photo> getListPhoto(){
+        List<Photo> list = new ArrayList<>();
+
+        list.add(new Photo(R.drawable.img_1));
+        list.add(new Photo(R.drawable.img_5));
+        list.add(new Photo(R.drawable.img_2));
+        list.add(new Photo(R.drawable.img_3));
+        list.add(new Photo(R.drawable.img_8));
+
+        return list;
 
     }
 
-    private void initValue2() {
-
-        ArrayList<TourModel> arrayList2 = new ArrayList<>();
-
-
-
-
-
-
-    }
 
     private void initValue1() {
         arrayList = new ArrayList<>();
