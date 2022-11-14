@@ -1,6 +1,5 @@
-package com.example.frag;
+package com.example.frag.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,11 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.frag.R;
 import com.example.frag.adapter.TrendAdapter;
 import com.example.frag.model.ItemList;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TrendFragment extends Fragment {
 

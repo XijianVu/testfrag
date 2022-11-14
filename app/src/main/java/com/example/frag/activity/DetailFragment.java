@@ -1,4 +1,4 @@
-package com.example.frag;
+package com.example.frag.activity;
 
 import android.os.Bundle;
 
@@ -7,13 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AccountFragment2#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class AccountFragment2 extends Fragment {
+import com.example.frag.R;
+import com.example.frag.model.ItemList;
+
+public class DetailFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,22 +23,25 @@ public class AccountFragment2 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private ImageView imgItemDetail;
+    private TextView tvTituloDetail;
+    private TextView tvDescripcionDetail;
+    private ItemList itemDetail;
 
-    public AccountFragment2() {
+    String titulo, descripcion;
+    Integer imgResource;
+
+    public DetailFragment() {
         // Required empty public constructor
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AccountFragment2.
-     */
+    public DetailFragment(String titulo, String descripcion, Integer imgResource) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.imgResource = imgResource;
+    }
     // TODO: Rename and change types and number of parameters
-    public static AccountFragment2 newInstance(String param1, String param2) {
-        AccountFragment2 fragment = new AccountFragment2();
+    public static DetailFragment newInstance(String param1, String param2) {
+        DetailFragment fragment = new DetailFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +62,11 @@ public class AccountFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account2, container, false);
+        View view =  inflater.inflate(R.layout.fragment_detail, container, false);
+
+        ImageView imgItemDetail = view.findViewById(R.id.imgItemDetail);
+        TextView tvTituloDetail = view.findViewById(R.id.tvTituloDetail);
+        TextView tvDescripcionDetail = view.findViewById(R.id.tvDescripcionDetail);
+        return view;
     }
 }

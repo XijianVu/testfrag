@@ -6,18 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.frag.DetailFragment;
 import com.example.frag.R;
 import com.example.frag.model.ItemList;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TrendAdapter extends RecyclerView.Adapter<TrendAdapter.TrendRecyclerHolder>{
 

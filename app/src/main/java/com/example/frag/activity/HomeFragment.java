@@ -1,4 +1,4 @@
-package com.example.frag;
+package com.example.frag.activity;
 
 import android.os.Bundle;
 
@@ -13,11 +13,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.frag.R;
 import com.example.frag.adapter.PhotoAdapter;
 import com.example.frag.adapter.PlaceAdapter;
 import com.example.frag.adapter.TourAdapter;
 import com.example.frag.adapter.TrendAdapter;
-import com.example.frag.model.ItemList;
 import com.example.frag.model.Photo;
 import com.example.frag.model.PlaceModel;
 import com.example.frag.model.TourModel;
